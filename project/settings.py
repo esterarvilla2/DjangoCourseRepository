@@ -89,17 +89,17 @@ DATABASES = {
        'NAME': BASE_DIR / 'db.sqlite3',
    }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'django',
-#         'USER': 'esterarvilla@esterarvilla',
-#         'PASSWORD': 'Esterarvilla',
-#         'HOST': 'esterarvilla.postgres.database.azure.com',
-#         'PORT': '5432',
-#         'OPTIONS': {'sslmode': 'require'}
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django',
+        'USER': 'esterarvilla',
+        'PASSWORD': os.getenv(DB_PASSWORD),
+        'HOST': 'esterarvilla.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {'sslmode': 'require'}
+    }
+}
 
 
 # Password validation
